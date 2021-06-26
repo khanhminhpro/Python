@@ -1,0 +1,61 @@
+#Source Code Máy Tính by Huy Pro
+
+# Phép Tính Cộng
+def add(x, y):
+    return x + y
+
+# Phép Tính Trừ
+def subtract(x, y):
+    return x - y
+
+# Phép Tính Nhân
+def multiply(x, y):
+    return x * y
+
+# Phép Tính Chia
+def divide(x, y):
+    return x / y
+# Tính số mũ
+def somu(x, y):
+    return x**y
+
+print("                            +-+-+-+-+-+-+-+-+-+-+-+")
+print("                            »  »  » Phúc Huy « « « ")
+print("                            +-+-+-+-+-+-+-+-+-+-+-+")
+print("                                 Máy Tính Tay      ")
+print("Các Phép Tính Bao Gồm")
+print("1.Cộng")
+print("2.Trừ")
+print("3.Nhân")
+print("4.Chia")
+print("5.số mũ")
+
+while True:
+    #Chọn Phép Tính Muốn Dùng
+    choice = input("Chọn Phép Tính (1/2/3/4/5): ")
+
+    # Điền
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("Điền Số Thứ Nhất: "))
+        num2 = float(input("Điền Số Thứ Hai : "))
+    if choice in ('5'):
+        num1 = float(input("Điền Số : "))
+        num2 = float(input("Điền Số mũ : "))
+
+     #Tính
+        if choice == '1':
+            print(num1, "+", num2, "=", add(num1, num2))
+
+        elif choice == '2':
+            print(num1, "-", num2, "=", subtract(num1, num2))
+
+        elif choice == '3':
+            print(num1, "*", num2, "=", multiply(num1, num2))
+
+        elif choice == '4':
+            print(num1, "/", num2, "=", divide(num1, num2))
+        elif choice == '5':
+            print(num1, "^", num2, "=", somu(num1, num2))
+        break
+    else:
+        print("Lỗi ! Thao Tác Sai")
